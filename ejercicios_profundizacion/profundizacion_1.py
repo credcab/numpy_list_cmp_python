@@ -28,9 +28,17 @@ que ya dispongamos de Python. El objetivo es:
     b) Si el número es mayor a 21 se debe informar al usuario que perdio
 '''
 
+#importar random para luego poder usarlo
+import random
+
 if __name__ == '__main__':
     print('Comenzamos a divertirnos!')
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
+
+    carta = [random.randint(1, 10) for x in range(3)]
+    resultado = [sum(carta) if sum(carta)<=21 else 'alpiste perdiste']
+    print(resultado)
+
 
     print("terminamos")

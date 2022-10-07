@@ -10,6 +10,9 @@
 # Ejercicios con lambda
 
 
+from re import X
+
+
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     
@@ -17,6 +20,11 @@ if __name__ == '__main__':
     # 1)
     # Realizar una funcion lambda que eleve al cuadrado
     # el número pasado como parámetro
+    
+    numero_ingresado = float(input('Ingresa un número y lo elevaré al cuadrado\n'))
+    potencia_2 = (lambda numero_ingresado: numero_ingresado**2)
+    pot_x = potencia_2(numero_ingresado)
+    print(pot_x)
 
     # potencia_2 = lambda x:......
     # pot_3 = potencia_2(3)
@@ -34,7 +42,9 @@ if __name__ == '__main__':
 
     # Lista de numeros
     numeros = [1, -5, 4, 3]
-
+    
     # numeros_potencia = list(map....)
+    numeros_potencia = list(map(lambda x: x**2, numeros))
+    print(numeros_potencia)
 
     print("terminamos")
